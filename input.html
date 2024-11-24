@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>*</title>
+    <script>
+        function showStars() {
+            let num = parseInt(document.getElementById("numInput").value);
+            let output = '';
+
+            for (let i = 1; i < num; i++) {
+                    output += '*'.repeat(i) + '<br>';
+            }
+            for (let i = num; i >= 1; i--) {
+                    output += '*'.repeat(i) + '<br>';
+            }
+                
+                document.getElementById("result").innerHTML = output;
+        }
+    </script>
+</head>
+<body>
+    Input : <input type="number" id="numInput" min="1"/>
+    <button onclick="showStars()">แสดงผล</button>
+
+    <div id="result"></div>
+</body>
+</html>
